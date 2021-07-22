@@ -6,5 +6,6 @@
   },
   "admin/GetAwsAccountId" : [{
     "a" : "b"
-  }]
+  }],
+  "a" : [{"id" : "1"}]
 }
