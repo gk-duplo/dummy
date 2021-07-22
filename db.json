@@ -1,11 +1,7 @@
 {
-  "/admin/GetAwsAccountId": [
-    {
-      "id": 1,
-      "title": "hello"
+  "admin" : {
+    "GetAwsAccountId" : {
+      id: "123455"
     }
-  ],
-  "profile": {
-    "name": "typicode"
   }
 }
