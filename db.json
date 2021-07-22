@@ -4,7 +4,7 @@
       "id": "123455"
     }
   },
-  "admin/GetAwsAccountId" : {
+  "admin/GetAwsAccountId" : [{
     "a" : "b"
-  }
+  }]
 }
