@@ -3,5 +3,8 @@
     "GetAwsAccountId" : {
       "id": "123455"
     }
+  },
+  "admin/GetAwsAccountId" : {
+    "a" : "b"
   }
 }
