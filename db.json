@@ -1,7 +1,5 @@
 {
   "admin/GetAwsAccountId" : {
-    "GetAwsAccountId" : {
-      "id": "123455"
-    }
+    "id" : "123"
   }
 }
