@@ -24,14 +24,17 @@ env:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
+  tenant1:
+    if: inputs.tenant1 == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: tenant1
-        run: echo "tenant1"
-        if: inputs.tenant1 == true
-      - name: tenant2
+        run: echo "tenant2"
+        if: inputs.tenant2 == true
+  tenant2:
+    if: inputs.tenant2 == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: tenant1
         run: echo "tenant2"
         if: inputs.tenant2 == true
