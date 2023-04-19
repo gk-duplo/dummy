@@ -30,11 +30,9 @@ jobs:
     steps:
       - name: tenant1
         run: echo "tenant2"
-        if: inputs.tenant2 == true
   tenant2:
     if: inputs.tenant2 == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: tenant1
         run: echo "tenant2"
-        if: inputs.tenant2 == true
