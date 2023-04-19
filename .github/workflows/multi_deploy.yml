@@ -1,10 +1,16 @@
 name: Multi Environments Deploy
 on:
   # Triggers the workflow on push to matching branches
-  workflow_dispatch: 
-   push:
-     branches:
-       - main  
+  workflow_dispatch:
+    inputs:
+      tenant1:
+        description: 'tenan1'
+        required: true
+        default: true
+        type: boolean
+  push:
+    branches:
+    - main  
 env:
   duplo_host: https://included-ai.duplocloud.net 
   duplo_token: "${{ secrets.DUPLO_TOKEN }}"
