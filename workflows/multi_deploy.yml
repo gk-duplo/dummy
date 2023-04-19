@@ -1,0 +1,46 @@
+name: Multi Environments Deploy
+on:
+  # Triggers the workflow on push to matching branches
+  workflow_dispatch: 
+  # push:
+  #   branches:
+  #     - multi_deploy  
+env:
+  duplo_host: https://included-ai.duplocloud.net 
+  duplo_token: "${{ secrets.DUPLO_TOKEN }}"
+  SERVICE_NAME: included
+  TENANT_NAMES: "tenant1,tenant2"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+    #This part is important - it will be used by the deploy job
+    outputs:
+      tenant_names: "[ ${{ env.TENANT_NAMES }} ]"
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    strategy:
+      matrix:
+        tenant:  ${{fromJson(needs.build.outputs.tenant_names)}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Print
+        run: |
+          echo "Tenant name is : ${{ matrix.tenant }}"
+      
+      # Update the backend service to use the new image.
+      - name: Deploy
+        uses: duplocloud/ghactions-service-update@master
+        with:
+          tenant: "${{ matrix.tenant }}"
+          services: |-
+            [
+              { "Name": "${{ env.SERVICE_NAME }}", "Image": "aa:bb" }
+            ]
