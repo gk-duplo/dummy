@@ -29,9 +29,9 @@ jobs:
     steps:
       - name: tenant1
         run: echo "tenant2"
-        if: ${{ inputs.tenant1 == 'true' }}
+        if: ${{ github.event.inputs.tenant1 == 'true' }}
   tenant2:
-    if: ${{ inputs.tenant2 == 'true' }}
+    if: ${{ github.event.inputs.tenant2 == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: tenant1
