@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v2
       - name: tenant1
         run: echo "tenant1"
-        if: inputs.tenant1
-      - name: tenant1
+        if: inputs.tenant1 == true
+      - name: tenant2
         run: echo "tenant2"
-        if: inputs.tenant2
+        if: inputs.tenant2 == true
