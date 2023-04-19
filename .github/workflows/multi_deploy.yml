@@ -25,13 +25,13 @@ env:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   tenant1:
-    if: inputs.tenant1 == 'true'
+    if: ${{ inputs.tenant1 == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: tenant1
         run: echo "tenant2"
   tenant2:
-    if: inputs.tenant2 == 'true'
+    if: ${{ inputs.tenant2 == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: tenant1
