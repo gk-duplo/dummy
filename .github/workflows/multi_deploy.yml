@@ -8,7 +8,7 @@ on:
         required: true
         default: true
         type: boolean
-      tenant1:
+      tenant2:
         description: 'tenant2'
         required: true
         default: true
