@@ -3,7 +3,7 @@ on:
   # Triggers the workflow on push to matching branches
   push:
     branches:
-      - main  
+      - main1
 env:
   duplo_host: https://included-ai.duplocloud.net 
   duplo_token: "${{ secrets.DUPLO_TOKEN }}"
