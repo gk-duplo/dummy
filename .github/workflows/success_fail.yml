@@ -15,3 +15,6 @@ jobs:
       - name: Step 2
         if: ${{ failure() }}
         run: echo "This step will run even if Step 1 fails"
+      - name: Step 3
+        if: ${{ success() }}
+        run: echo "This step will run even if Step 1 fails"
