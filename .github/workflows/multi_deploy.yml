@@ -12,10 +12,7 @@ on:
         description: 'tenant2'
         required: true
         default: true
-        type: boolean
-  push:
-    branches:
-    - main  
+        type: boolean 
 env:
   duplo_host: https://included-ai.duplocloud.net 
   duplo_token: "${{ secrets.DUPLO_TOKEN }}"
