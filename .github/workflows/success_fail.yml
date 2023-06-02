@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Step 1
         run: echo "This step will fail" && exit 1
-        continue-on-error: true
       - name: Step 2
         if: ${{ failure() }}
         run: echo "This step will run even if Step 1 fails"
