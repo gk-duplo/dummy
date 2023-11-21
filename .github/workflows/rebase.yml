@@ -26,6 +26,6 @@ jobs:
       run: |
         git checkout main
         git pull origin main
-        git checkout development
+        git checkout dev
         git rebase main
-        git push origin development
+        git push origin dev
