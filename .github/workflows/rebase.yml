@@ -24,6 +24,8 @@ jobs:
 
     - name: Rebase dev with main
       run: |
+        git checkout main
+        git pull origin main
         git checkout development
-        git pull origin main --rebase
+        git rebase main
         git push origin development
