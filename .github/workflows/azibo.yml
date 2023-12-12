@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Azibo
 on:
   # (Optional) Allows users to trigger the workflow manually from the GitHub UI
   workflow_dispatch:
