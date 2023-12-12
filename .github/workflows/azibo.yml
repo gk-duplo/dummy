@@ -11,7 +11,7 @@ env:
   duplo_host: https://azibo.duplocloud.net  # CHANGE ME!
   duplo_token: "AQAAANCMnd8BFdERjHoAwE_Cl-sBAAAAqDyQKI3n5U-0wwk5l4CX7wAAAAACAAAAAAAQZgAAAAEAACAAAABhwCj56Tgmr1IQrBrnkZ5D1Ihg25g5ZlbaJ1GKk5HJMgAAAAAOgAAAAAIAACAAAACfP1lU1g5eeyFJd7_dZfcGRXNl2TKMyv0bhrLw8K5OipAAAAAr3f6X8RCRqK_9TyvwTwwmlhc6F_xzVLRWjvhzJ5NKBoNuykHoFYnO83PkaewkmGsh_8FYx-jiEJvKsxAuinzmFUUwX2doeeOw6Gckwr333DG9m5W_Ou9uBCh-Iucie0RzsWfnPVD3nW7XdUY3hxHXDaLtwmKI0XkKtmt7cmki-NPNThCtX55p6mvlAmoGM1pAAAAAszmmyHzoP6tzw0PpcJbLb7VErf5IvxEl05HPsBCtH7SXzKA5jvujp2274PxaJUPmzAAGA97jvxzoYhA3Tk6jRg"
   SERVICE_NAME: todelete                      # CHANGE ME!
-  TENANT_NAME: prod                        # CHANGE ME!
+  TENANT_NAME: prod                        # CHANGE ME!1
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
